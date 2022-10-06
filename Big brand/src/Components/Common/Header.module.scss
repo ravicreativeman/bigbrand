@@ -1,0 +1,198 @@
+.main-header {
+    :global {
+      .banner-bg {
+        background-image: url('../../img/Banner/banner-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: center center;
+      }
+  
+      nav {
+        position: sticky;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0, 0.8);
+        padding: 20px 0;
+      }
+  
+      nav .logo {
+        font-size: 24px;
+        color: #fff;
+      }
+  
+      nav .links {
+        display: flex;
+        // justify-content: space-around;
+        align-items: center;
+      }
+  
+      nav .links li {
+        margin-right: 20px;
+      }
+  
+      nav .links li:last-child {
+        margin-right: 0px;
+      }
+  
+      #nav-toggle {
+        position: absolute;
+        top: -100px;
+      }
+  
+      nav .icon-burger {
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      nav .icon-burger .line {
+        width: 30px;
+        height: 5px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+        transition: all 0.5s ease-in-out;
+      }
+  
+      button {
+        background-color: #246066;
+        color: white;
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 5px;
+      }
+  
+      button:hover {
+        background-color: white;
+        color: #246066;
+        padding: 5px 10px;
+        border: 0;
+      }
+  
+      .p-absolute-50 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
+      .banner_title {
+        font-size: 40px;
+        line-height: 50px;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        text-decoration: dotted;
+      }
+  
+    //   ======== Inside Class =====
+    
+      .logo {
+        span {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .main-header {
+      :global {
+        .banner_title {
+          font-size: 35px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+  
+
+  @media screen and (max-width: 1280px) {
+    .main-header {
+      :global {
+        .banner_title {
+          font-size: 30px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .main-header {
+      :global {
+        .banner_title {
+          font-size: 25px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .main-header {
+      :global {
+        .banner_title {
+          font-size: 18px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .main-header {
+      :global {
+        nav .links {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0px;
+          bottom: 100%;
+          width: auto;
+          height: auto;
+          flex-direction: column;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 1);
+          overflow: hidden;
+          transition: all 0.5s ease-in-out;
+        }
+  
+        nav :checked ~ .links {
+          bottom: 0;
+        }
+  
+        nav .icon-burger {
+          display: block;
+        }
+  
+        nav :checked ~ .icon-burger .line:nth-child(1) {
+          transform: translateY(10px) rotate(225deg);
+        }
+  
+        nav :checked ~ .icon-burger .line:nth-child(3) {
+          transform: translateY(-10px) rotate(-225deg);
+        }
+  
+        nav :checked ~ .icon-burger .line:nth-child(2) {
+          opacity: 0;
+        }
+  
+        nav .links li {
+          margin-right: 0px;
+          margin-bottom: 20px;
+        }
+  
+        nav .links li:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  
